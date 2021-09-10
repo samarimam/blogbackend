@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { Box, TextareaAutosize, Button, makeStyles } from "@material-ui/core";
+import {
+    Box,
+    Typography,
+    TextareaAutosize,
+    Button,
+    makeStyles,
+} from "@material-ui/core";
 
 import { newComment, getComments } from "../../service/api";
 
@@ -44,7 +50,7 @@ const Comments = ({ post }) => {
     const [comments, setComments] = useState([]);
     const [data, setData] = useState();
     const [toggle, setToggle] = useState(false);
-    let [count, setCount] = useState(0);
+    let [count, setcount] = useState(0);
 
     useEffect(() => {
         const getData = async () => {
@@ -66,9 +72,9 @@ const Comments = ({ post }) => {
 
     const addComment = async () => {
         await newComment(comment);
-        setToggle((prev) => !prev);
-        setCount = count++;
+        setcount = count++;
         setData("");
+        setToggle((prev) => !prev);
     };
 
     // console.log(post);

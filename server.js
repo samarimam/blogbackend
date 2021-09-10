@@ -12,13 +12,15 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", Router);
+
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+    app.use(express.static("client/bild"));
 }
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`server is running in port ${PORT}`));
-
-const URL =
+const url =
     "mongodb+srv://samarimam78:w4bCFhKWO9qVmDCO@cluster0.saxpk.mongodb.net/mernblog?retryWrites=true&w=majority";
-Connection(process.env.MONGODB_URI || URL);
+Connection(process.env.MONGODB_URI || url);
+// w4bCFhKWO9qVmDCO
+// mongodb+srv://samar_mern_todolist:<password>@cluster0.c6qid.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

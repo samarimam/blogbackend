@@ -1,4 +1,10 @@
-import { AppBar, Toolbar, makeStyles, Button } from "@material-ui/core";
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    makeStyles,
+    Button,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useOktaAuth } from "@okta/okta-react";
@@ -53,7 +59,6 @@ const Header = () => {
         <AppBar className={classes.component}>
             <Toolbar className={classes.container}>
                 <Link to='/'>HOME</Link>
-
                 <a href='https://samarimam.github.io/myportfolio/'>ABOUT</a>
                 <a href='https://www.linkedin.com/in/samar-imam-7922211b7/'>
                     CONTACT
