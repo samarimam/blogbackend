@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "";
+const url = "http://mymernblogweb.herokuapp.com/";
 
 export const uploadFile = async (data) => {
     console.log(data);
